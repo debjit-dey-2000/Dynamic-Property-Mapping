@@ -735,12 +735,12 @@ add_action('admin_notices', function(){
 
 
 
-/**
- * Add "Visit plugin site" link in plugin meta row
- */
-add_filter( 'plugin_row_meta', 'twfe_plugin_meta_links', 10, 2 );
+// ─────────────────────────────────────────────
+// 8. PLUGIN META LINK
+// ─────────────────────────────────────────────
+add_filter( 'plugin_row_meta', 'dpm_plugin_meta_links', 10, 2 );
 
-function twfe_plugin_meta_links( $links, $file ) {
+function dpm_plugin_meta_links( $links, $file ) {
 
     if ( plugin_basename( __FILE__ ) === $file ) {
 
